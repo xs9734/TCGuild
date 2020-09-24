@@ -13,7 +13,7 @@
 <script src="https://kit.fontawesome.com/a812441a55.js" crossorigin="anonymous"></script>
 <title>Ten Commandments</title>
 </head>
-<body>
+<body onload="fetchOnline()">
 <div id="artwork">
 <!-- Main Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light main-nav">
@@ -56,6 +56,30 @@
 <!-- Main Section-->
 <div class="container mt-5 wrapper tibia-border">
     <h2>Players Online</h2>
+<!--
+    <div class="container px-5">
+
+      <div class="row">
+          <div class="col-6">
+            Vocations
+            <div class="row">
+              <div class="col-3">Knight</div>
+              <div class="col-3">Paladin</div>
+              <div class="col-3">Sorcerer</div>
+              <div class="col-3">Druid</div>
+            </div>
+          </div>
+          <div class="col-6">
+            Chart
+            <div class="row">
+              <div class="col-12 placeholder">
+                Hold up, still working on this.
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+-->
     <div class="tibia-border">
   <table class="table table-striped ">
     <thead class="thead-dark thead-online">
@@ -67,12 +91,6 @@
       </tr>
     </thead>
     <tbody id="online-table">
-      <tr>
-        <th scope="row">Eremo</th>
-        <td>Sorcerer</td>
-        <td>120</td>
-        <td></td>
-      </tr>
     </tbody>
   </table>
 </div>
