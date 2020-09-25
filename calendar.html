@@ -7,10 +7,21 @@
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="css/stylesheet.css" type="text/css" charset="utf-8" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5/main.min.css">
 <link rel="stylesheet" href="css/app.css">
 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat&display=swap" rel="stylesheet"> 
-
 <script src="https://kit.fontawesome.com/a812441a55.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5/locales-all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5/main.min.js"></script>
+<script>
+   document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+          initialView: 'dayGridMonth'
+   });
+   calendar.render();
+   });
+</script>
 <title>Ten Commandments</title>
 </head>
 <body>
@@ -60,6 +71,7 @@
 
 
 <div class="container mt-5 wrapper tibia-border">
+<div id='calendar'></div>
 </div>
 <!--End Main Section-->
 
