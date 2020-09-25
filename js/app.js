@@ -42,7 +42,7 @@ function fetchOnline(){
                     var charVocation = data.guild.members[i].characters[m].vocation;
                     var charLevel = data.guild.members[i].characters[m].level;
                     var charShareHigh = Math.floor(charLevel * 1.50); //do share range math
-                    var charShareLow =  Math.ceil(charLevel * 3.0 / 2);
+                    var charShareLow =  Math.floor(charLevel * .666); //+-1 lvl accuracy ;( I was bamboozeled
                     var entry = document.createElement('tr');
                     entry.className = 'onlineEntry';
                     entry.innerHTML =
