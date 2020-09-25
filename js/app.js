@@ -41,8 +41,8 @@ function fetchOnline(){
                     var charName = data.guild.members[i].characters[m].name;
                     var charVocation = data.guild.members[i].characters[m].vocation;
                     var charLevel = data.guild.members[i].characters[m].level;
-                    var charShareHigh = Math.floor(charLevel * 1.50); //do share range math
-                    var charShareLow =  Math.floor(charLevel * .666); //+-1 lvl accuracy ;( I was bamboozeled
+                    var charShareHigh = Math.floor(charLevel*3.0/2,0); //According to Tibia Wiki. 
+                    var charShareLow =  Math.floor(charLevel*2.0/3,0); //low range
                     var entry = document.createElement('tr');
                     entry.className = 'onlineEntry';
                     entry.innerHTML =
