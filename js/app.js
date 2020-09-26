@@ -41,8 +41,9 @@ function fetchOnline(){
                     var charName = data.guild.members[i].characters[m].name;
                     var charVocation = data.guild.members[i].characters[m].vocation;
                     var charLevel = data.guild.members[i].characters[m].level;
-                    var charShareHigh = Math.floor(charLevel*3.0/2,0); //According to Tibia Wiki. 
+                    var charShareHigh = Math.floor(charLevel*3.0/2,0);
                     var charShareLow =  Math.floor(charLevel*2.0/3,0); //low range
+                    charShareHigh += charLevel % 2 === 0 ? 1 : 0; //According to Tibia Wiki.
                     var entry = document.createElement('tr');
                     entry.className = 'onlineEntry';
                     entry.innerHTML =
