@@ -45,8 +45,9 @@ p{
     font-weight: 600;
 }
 .hero h1{
+    line-height:5rem;    
     color:#fff;
-    font-size:3rem;
+    font-size:2rem;
 }
 .navbar-light .navbar-brand{
     color: #8a6b0f;
@@ -61,7 +62,7 @@ p{
     padding:10px;
 }
 
-/*links in footer blend with background, find a fix*/
+/*links in footer blend with background, experiment with colors later*/
 .page-footer{
     color: #ffffff; 
 }
@@ -72,4 +73,42 @@ border: 1px solid black;
 
 .container img{
 max-width: 100%;
+}
+
+/*donuts start*/
+.donut-chart svg {
+	pointer-events: none;
+  height: 100%;
+}
+.donut-chart svg path {
+	fill: none;
+	stroke-width: 35px;
+	stroke: #f7c11f;
+}
+.donut-chart {
+	width: 200px;
+	height: 200px;
+	position: relative;
+	display: inline-block;
+}
+.donut-chart p {
+	margin: 0;
+	position: absolute;
+	top: 20%;
+	left: 0;
+	width: 100%;
+	text-align: center;
+    font-size: 1.5em;
+    color:#fff;
+}
+.donut-chart span {
+	display: block;
+	font-size: 1.5em;
+}
+/*donuts over*/
+
+@media (min-width: 768px) { 
+    .hero h1{
+        font-size:5rem;
+    }
 }
