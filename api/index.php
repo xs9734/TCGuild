@@ -7,7 +7,7 @@
  */
 
 error_reporting(0);
-date_default_timezone_set('America/Sao_Paulo');
+//date_default_timezone_set('America/Sao_Paulo');
 
 /*inicio URL AMIGAVEL*/
 $url = (isset($_GET['url'])) ? $_GET['url']:'index.php';
