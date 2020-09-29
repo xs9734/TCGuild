@@ -61,11 +61,9 @@ VALUES
             $conn->query($SQL1);
         }
 
-        echo $SQL2 = "SELECT * FROM guild_member_time_online WHERE id_member = '$id_member' AND status = '0'";
-        echo "<br>";
+        $SQL2 = "SELECT * FROM guild_member_time_online WHERE id_member = '$id_member' AND status = '0'";
         $SQL2 = $conn->query($SQL2);
-        echo $SQL2Tt = $SQL2->rowCount();
-        echo "<br>";
+        $SQL2Tt = $SQL2->rowCount();
 
         if($SQL2Tt == 0){
 
@@ -90,11 +88,6 @@ VALUES
 
             }
         }
-
-
-
-
-
 
 
     }

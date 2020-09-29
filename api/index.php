@@ -6,7 +6,7 @@
  * Time: 10:59
  */
 
-error_reporting(1);
+error_reporting(0);
 date_default_timezone_set('America/Sao_Paulo');
 
 /*inicio URL AMIGAVEL*/
