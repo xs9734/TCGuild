@@ -1,0 +1,14 @@
+RewriteEngine On
+#RewriteCond %{HTTPS} off
+#RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [R,L]
+
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?url=$1&url1=$2
+
+RewriteRule !\.(js|ico|txt|gif|jpg|jpeg|png|css|swf|svg|eot|ttf|woff|htc|SWF|PNG|JPG|GIF|JS|TXT|html|rar)$ index.php
+
+<files *.log>
+    order deny,allow
+    deny from all
+</files>
