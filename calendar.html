@@ -11,17 +11,11 @@
 <link rel="stylesheet" href="css/app.css">
 <link href="https://fonts.googleapis.com/css2?family=Acme&family=Montserrat&display=swap" rel="stylesheet"> 
 <script src="https://kit.fontawesome.com/a812441a55.js" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5/locales-all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/luxon@1.25.0/build/global/luxon.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5/main.min.js"></script>
-<script>
-   document.addEventListener('DOMContentLoaded', function() {
-      var calendarEl = document.getElementById('calendar');
-      var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
-   });
-   calendar.render();
-   });
-</script>
+<script src="https://cdn.jsdelivr.net/npm/fullcalendar@5/locales-all.min.js"></script>
+<script src="js/calendar.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@fullcalendar/luxon@5.3.1/main.global.min.js"></script>
 <title>Ten Commandments</title>
 </head>
 <body>
@@ -71,7 +65,28 @@
 
 
 <div class="container mt-5 wrapper tibia-border">
-<div id='calendar'></div>
+    <div id='top'>
+
+        <div style='float:left'>
+          Timezone:
+          <select id='time-zone-selector'>
+            <option value='local'>local</option>
+            <option value='UTC' selected>UTC</option>
+          </select>
+        </div>
+       <div style='float:right'>
+        Locales:
+        <select id='locale-selector'></select>
+       </div>
+        <div style='float:right'>
+          <span id='loading'>loading...</span>
+      
+        </div>
+      
+        <div style='clear:both'></div>
+      </div>
+      
+      <div id='calendar'></div>
 </div>
 <!--End Main Section-->
 

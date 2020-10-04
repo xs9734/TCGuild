@@ -1,0 +1,37 @@
+[
+
+    {
+        "allDay": "yes",
+        "title": "Spooky Screenshot Contest",
+        "id": "821",
+        "start": "2020-10-01T08:00:00",
+        "end": "2020-10-12T08:00:00",
+        "color":"purple"
+    },
+
+    {
+        "allDay": "yes",
+        "title": "Screenshot Winner Announcement",
+        "id": "822",
+        "start": "2020-10-15T08:00:00",
+        "end": "2020-10-15T08:00:00",
+        "color":"purple"
+
+    },
+    {
+        "allDay": "yes",
+        "title": "Banshee Quest",
+        "id": "823",
+        "start": "2020-10-10T08:00:00",
+        "end": "2020-10-11T08:00:00",
+        "color":"Black"
+    },
+    {
+        "allDay": "yes",
+        "title": "Halloween Event",
+        "id": "824",
+        "start": "2020-10-31T08:00:00",
+        "end": "2020-10-31T08:00:00",
+        "color":"orange"
+    }
+]
