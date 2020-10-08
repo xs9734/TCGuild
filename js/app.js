@@ -1,7 +1,7 @@
 $(document).ready(() => {
     const $neferaJSON = `https://api.tibiadata.com/v2/world/Nefera.json`
     const $guildJSON = `https://api.tibiadata.com/v2/guild/Ten+Commandments.json`
-    const $onlineCounter = $('#menu-button');
+    const $onlineCounter = $('#online-counter');
     const $onlineCounterGuild = $('#online-counter-guild');
     const $onlineCounterGuildDonut = $('#online-counter-donut');
     const $onlineTable = $('#online-table');
@@ -25,7 +25,7 @@ $(document).ready(() => {
         console.warn('Something went wrong', err); //error
     })
 
-    function fetchOneline(){
+    function fetchOnline(){
         fetch($guildJSON).then(function(response){
             return response.json();
         }).then(function(data){
