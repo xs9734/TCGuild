@@ -7,6 +7,11 @@ $(document).ready(() => {
     const $onlineTable = $('#online-table');
     const $guildStatsTotal = $('#guild-stats-member-total');
 
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+   
+
     fetch($neferaJSON).then(function(response) { //all online
         return response.json();
     }).then(function(data) {
