@@ -72,9 +72,9 @@ $(".tiers").click(function() { //The method I want
     }
  });
 $(".token-price-check").click(function(){
-    i_gold_token[0]= $("#i_gold_token").val()* i_gold_token[3];
-    i_gold_token[1]= $("#i_gold_token").val()* i_gold_token[4];
-    i_gold_token[2]= $("#i_gold_token").val()* i_gold_token[5];
+    i_gold_token[0]= $("#i_gold_token").val()* i_gold_token[3]; //price of 2 gold tokens
+    i_gold_token[1]= $("#i_gold_token").val()* i_gold_token[4]; //price of 4 gold tokens
+    i_gold_token[2]= $("#i_gold_token").val()* i_gold_token[5]; //price of 6 gold tokens
     var checkNumber = $("#i_gold_token").val();
     if ($.isNumeric(checkNumber) == true){
         $(".toast-body").html(`New Gold Token Price: ${$("#i_gold_token").val()} gps`);
@@ -102,10 +102,11 @@ $(".price-check").click(function(){
             console.log(`total with 50% rate = ${total} gp`);
         }
         if(i_gold_token[0] < i_vampirism[0]){
+            console.log(`Buy 2 Tokens`);
             $i_details[3].html(`Exchanging 2 gold tokens is cheaper`);
         }
         else{
-            console.log(`Buy actual items`);
+            console.log(`Buy Items`);
             $i_details[3].html(`Buying the items from the market is cheaper`);
         }
     }
@@ -121,6 +122,14 @@ $(".price-check").click(function(){
             var total = i_vampirism[0] + i_vampirism[1] + i_fee[1];
             console.log(`total with 50% rate = ${total} gp`);
         }
+        if(i_gold_token[1] < i_vampirism[1]){
+            console.log(`Buy 4 Tokens`);
+            $i_details[3].html(`Exchanging 4 gold tokens is cheaper`);
+        }
+        else{
+            console.log(`Buy actual items`);
+            $i_details[3].html(`Buying the items from the market is cheaper`);
+        }
     }
     else if($(this).parent().attr("data-name") == 2){                   // powerful imbuement
         i_vampirism[0] = $("#i_vampirism_t1").val() * i_vampirism[3];
@@ -134,6 +143,16 @@ $(".price-check").click(function(){
         else if($(this).siblings(".form-check-inline").children("input").is(":not(:checked)")){         // Add basic fee
             var total = i_vampirism[0] + i_vampirism[1] + i_vampirism[2] + i_fee[2];
             console.log(`total with 50% rate = ${total} gp`);
+        }
+        if(i_gold_token[2] < i_vampirism[2]){
+            console.log(`Total cost of coins is ${i_gold_token[2]} and cost of items is ${i_vampirism[2]}`);
+            console.log(`Buy 6 Tokens`);
+            $i_details[3].html(`Exchanging 6 gold tokens is cheaper`);
+        }
+        else{
+            console.log(`Total cost of coins is ${i_gold_token[2]} and cost of items is ${i_vampirism[2]}`)
+            console.log(`Buy actual items`);
+            $i_details[3].html(`Buying the items from the market is cheaper`);
         }
     }
     else{                                                               // for some reason its broken :o
@@ -184,6 +203,7 @@ $(".price-check-void").click(function(){
             var total = i_void[0] + i_void[1] + i_fee[1];
             console.log(`total with 50% rate = ${total} gp`);
         }
+
     }
     else if($(this).parent().attr("data-name") == 2){                   // powerful imbuement
         i_void[0] = $("#i_void_t1").val() * i_void[3];

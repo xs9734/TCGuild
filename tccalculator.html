@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -58,18 +59,73 @@
 
 <!-- Main Section-->
 <div class="hero text-center py-3">
-    <h1 class="martel-l mt-3">History</h1>
+    <h1 class="martel-l mt-3">Item Price Checker</h1>
 </div>
 
 <div class="container mt-5 wrapper tibia-border">
-    <div class="text-center"><img src="https://www.tibiawiki.com.br/images/7/71/Spyreport.gif" alt="parchment"></div>
-    <h2 class="px-5">The Beginning</h2>
-    <p>The guild was founded on Nefera on Jan 12 2020</p>
-    <h2 class="px-5">Leader History</h2>
-    <p>Scony Sira</p>
-    <p>Shortii</p>
-    <p>Scony Sira</p>
-    <p>Ric Nexus</p>
+    <div class="text-center"><img src="https://www.tibiawiki.com.br/images/1/1a/Tibia_Coins.gif" alt="coins"></div>
+    <h2 class="px-5">Getting Started</h2>
+    <p class="px-5"> For information regarding transfering between servers visit:
+        <ul class="ml-5">
+            <li><a href="https://tibia.fandom.com/wiki/Transfer" target="_blank">Server Transfers</a></li>
+            <li><a href="https://tibia.fandom.com/wiki/Tibia_Coins" target="_blank">Tibia Coins</a></li>
+        </ul>
+    </p>
+    <!-- Imbue Sections-->
+    <div class="row m-5">
+        <div class="col-lg-6 pb-3"> <!-- Server A -->
+            <h2 data-toggle="tooltip" data-placement="top" title="Life Leech">Server A</h2>
+            <form class="form-row align-items-center" data-name="">
+                <label class="col-sm-12" for="coin_a_price" data-toggle="tooltip" data-placement="left" title="25 items">Tibia Coin Price</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="coin_a_price" placeholder="Price per item">
+                    <div class="input-group-append">
+                        <div class="input-group-text">gps</div>
+                    </div>
+                </div>
+                <label class="col-sm-12" for="item_a_price" data-toggle="tooltip" data-placement="left" title="15 items">Item Price</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="item_a_price" placeholder="Price per item">
+                    <div class="input-group-append">
+                        <div class="input-group-text">gps</div>
+                    </div>
+                </div>
+                <button data-name="price-check-a" type="button" class="price-check-a btn btn-primary col-sm-12 mt-2">Price Check</button>
+                <div class="col-sm-12 pt-3 details-box">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-light">Price in TC</li>
+                        <li class="list-group-item" id="total_a">-</li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-6 pb-3"> <!-- Server B -->
+            <h2 data-toggle="tooltip" data-placement="top" title="Life Leech">Server B</h2>
+            <form class="form-row align-items-center" data-name="">
+                <label class="col-sm-12" for="coin_b_price" data-toggle="tooltip" data-placement="left" title="25 items">Tibia Coin Price</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="coin_b_price" placeholder="Price per item">
+                    <div class="input-group-append">
+                        <div class="input-group-text">gps</div>
+                    </div>
+                </div>
+                <label class="col-sm-12" for="item_b_price" data-toggle="tooltip" data-placement="left" title="15 items">Item Price</label>
+                <div class="input-group">
+                    <input type="text" class="form-control" id="item_b_price" placeholder="Price per item">
+                    <div class="input-group-append">
+                        <div class="input-group-text">gps</div>
+                    </div>
+                </div>
+                <button data-name="price-check-b" type="button" class="price-check-b btn btn-primary col-sm-12 mt-2">Price Check</button>
+                <div class="col-sm-12 pt-3 details-box">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item bg-light">Price in TC</li>
+                        <li class="list-group-item" id="total_b">-</li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 <!--End Main Section-->
 
@@ -87,6 +143,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-    <script src="js/app.js"></script>  
+    <script src="js/app.js"></script> 
+    <script src="js/itemcalculator.js"></script>   
   </body>
 </html>
