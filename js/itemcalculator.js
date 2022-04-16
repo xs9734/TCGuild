@@ -17,7 +17,7 @@ $(".price-check-a").click(function(){
  coin_a_price = $("#coin_a_price").val();
  item_a_price = $("#item_a_price").val();
  item_a_total = item_a_price/coin_a_price;
- $total_a[0].html(item_a_total);
+ $total_a[0].html(Math.round(item_a_total));
 });
 
 $(".price-check-b").click(function(){
@@ -25,5 +25,5 @@ $(".price-check-b").click(function(){
     coin_b_price = $("#coin_b_price").val();
     item_b_price = $("#item_b_price").val();
     item_b_total = item_b_price/coin_b_price;
-    $total_b[0].html(item_b_total);
+    $total_b[0].html(Math.round(item_b_total));
 });
